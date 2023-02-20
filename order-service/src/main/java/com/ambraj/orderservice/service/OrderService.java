@@ -42,9 +42,9 @@ public class OrderService {
         boolean isInStock = Arrays.stream(Objects.requireNonNull(inventoryResponseArr))
                 .allMatch(InventoryResponse::isInStock);
 
-        if(isInStock) {
+        if (isInStock) {
             order = orderRepository.save(order);
-        }else {
+        } else {
             throw new IllegalArgumentException("Out of stock!");
         }
         return order.getOrderNumber();
