@@ -26,11 +26,11 @@ public class InventoryServiceApplication {
 
 			Inventory inventory2 = new Inventory();
 			inventory2.setSkuCode("iPhone 14");
-			inventory2.setQuantity(5L);
+			inventory2.setQuantity(0L);
 
 			Inventory inventory3 = new Inventory();
-			inventory3.setSkuCode("iPhone 14");
-			inventory3.setQuantity(5L);
+			inventory3.setSkuCode("Xbox");
+			inventory3.setQuantity(1L);
 
 			inventoryRepository.saveAll(List.of(inventory1, inventory2, inventory3));
 		};
